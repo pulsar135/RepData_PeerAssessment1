@@ -1,0 +1,16 @@
+# Course Project 1
+
+
+## Loading and Preprocessing of the Dataset
+
+'''{r }
+activity <- read.csv("activity.csv")
+activity$date <- as.Date(activity$date, "%Y-%m-%d")
+'''
+
+##Question:  What is the mean total number of steps taken per day?
+
+'''{r Total_Steps_per_Day}
+TSD <- aggregate(steps~date, data=activity, sum)
+with(TSD, plot(date, steps, type="h"))
+'''
