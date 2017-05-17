@@ -9,7 +9,7 @@ activity <- read.csv("activity.csv")
 activity$date <- as.Date(activity$date, "%Y-%m-%d")
 ```
 
-##Question:  What is the mean total number of steps taken per day?
+## Question:  What is the mean total number of steps taken per day?
 
 1. Total number of steps taken per day
 
@@ -44,7 +44,7 @@ median(TSD[[2]])
 ## [1] 10765
 ```
 
-##Question:  What is the average daily activity pattern?
+## Question:  What is the average daily activity pattern?
 
 1. Time Series Plot
 
@@ -70,7 +70,7 @@ ADAP[match(max(ADAP[[2]]),ADAP$steps),1]
 ## [1] 835
 ```
 
-##Input Missing Values
+## Input Missing Values
 
 1. Total number of missing values in the dataset
 
@@ -131,7 +131,7 @@ median(TSDactfill[[2]])
 - The mean value remained the same when compared to the original data, however the median increased to 10766 from 10765 for the original dataset
 - The impact on the estimates of the total daily number of steps is an increase of data at or near the mean value due to the missing values being replaced with the average for the specified time interval.  The result is a shift in the median value towards the mean value.
 
-##Question: Are there differences in activity patterns between weekdays and weekends?
+## Question: Are there differences in activity patterns between weekdays and weekends?
 
 1. Create a new factor variable with two levels "weekday" and "weekend" and add to the dataset
 

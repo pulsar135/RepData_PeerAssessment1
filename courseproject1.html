@@ -209,7 +209,7 @@ hr {
 activity$date &lt;- as.Date(activity$date, &quot;%Y-%m-%d&quot;)
 </code></pre>
 
-<p>##Question:  What is the mean total number of steps taken per day?</p>
+<h2>Question:  What is the mean total number of steps taken per day?</h2>
 
 <ol>
 <li>Total number of steps taken per day</li>
@@ -244,7 +244,7 @@ activity$date &lt;- as.Date(activity$date, &quot;%Y-%m-%d&quot;)
 <pre><code>## [1] 10765
 </code></pre>
 
-<p>##Question:  What is the average daily activity pattern?</p>
+<h2>Question:  What is the average daily activity pattern?</h2>
 
 <ol>
 <li>Time Series Plot</li>
@@ -271,7 +271,7 @@ g + geom_line() + labs(title = &quot;Average Daily Activity Pattern&quot;) +
 <pre><code>## [1] 835
 </code></pre>
 
-<p>##Input Missing Values</p>
+<h2>Input Missing Values</h2>
 
 <ol>
 <li>Total number of missing values in the dataset</li>
@@ -333,7 +333,7 @@ with(TSDactfill, plot(date, steps, xlab = &quot;Date&quot;, ylab = &quot;Total S
 <li>The impact on the estimates of the total daily number of steps is an increase of data at or near the mean value due to the missing values being replaced with the average for the specified time interval.  The result is a shift in the median value towards the mean value.</li>
 </ul>
 
-<p>##Question: Are there differences in activity patterns between weekdays and weekends?</p>
+<h2>Question: Are there differences in activity patterns between weekdays and weekends?</h2>
 
 <ol>
 <li>Create a new factor variable with two levels &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; and add to the dataset</li>
