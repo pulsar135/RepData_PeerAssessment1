@@ -20,8 +20,8 @@ TSD <- aggregate(steps~date, data=activity, sum)
 2. Histogram of the total number of steps taken per day
 
 ```r
-with(TSD, plot(date, steps, xlab = "Date", ylab = "Total Steps/Day", 
-               main = "Activity Monitoring Total Daily Steps", type="h"))
+hist(TSD$steps, xlab = "Total Steps/Day", ylab = "Frequency", 
+     main = "Activity Monitoring Total Daily Steps", col = "red")
 ```
 
 ![plot of chunk histogram_steps_per_day](figure/histogram_steps_per_day-1.png)
@@ -106,8 +106,8 @@ of steps taken per day.
 
 ```r
 TSDactfill <- aggregate(steps~date, data=actfill, sum)
-with(TSDactfill, plot(date, steps, xlab = "Date", ylab = "Total Steps/Day", 
-               main = "Activity Monitoring Total Daily Steps", type="h"))
+hist(TSDactfill$steps, xlab = "Total Steps/Day", ylab = "Frequency", 
+     main = "Activity Monitoring Total Daily Steps", col = "red")
 ```
 
 ![plot of chunk New_Total_Steps_per_Day](figure/New_Total_Steps_per_Day-1.png)

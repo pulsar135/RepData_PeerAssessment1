@@ -17,8 +17,8 @@ TSD <- aggregate(steps~date, data=activity, sum)
 
 2. Histogram of the total number of steps taken per day
 ```{r histogram_steps_per_day}
-with(TSD, plot(date, steps, xlab = "Date", ylab = "Total Steps/Day", 
-               main = "Activity Monitoring Total Daily Steps", type="h"))
+hist(TSD$steps, xlab = "Total Steps/Day", ylab = "Frequency", 
+     main = "Activity Monitoring Total Daily Steps", col = "red")
 ```
 
 3. Mean and Median of the total number of steps taken per day
@@ -70,8 +70,8 @@ sum(is.na(actfill$steps))
 of steps taken per day.
 ```{r New_Total_Steps_per_Day}
 TSDactfill <- aggregate(steps~date, data=actfill, sum)
-with(TSDactfill, plot(date, steps, xlab = "Date", ylab = "Total Steps/Day", 
-               main = "Activity Monitoring Total Daily Steps", type="h"))
+hist(TSDactfill$steps, xlab = "Total Steps/Day", ylab = "Frequency", 
+     main = "Activity Monitoring Total Daily Steps", col = "red")
 ```
 ```{r New_Mean_and_Median_Steps_per_Day}
 mean(TSDactfill[[2]])
